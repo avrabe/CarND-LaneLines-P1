@@ -1,3 +1,8 @@
+# Docker
+After checking the sources into ~/git/ the anaconda3 docker container can be used to run the python notebook.
+
+'docker run -v ~/git/:/git --rm -i -t -p 8888:8888 continuumio/anaconda3 /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && pip install pillow && conda install -y -c https://conda.anaconda.org/menpo opencv3 &&  pip install moviepy && apt-get install -y libgtk2.0-0 && mkdir /opt/notebooks && /opt/conda/bin/jupyter notebook --notebook-dir=/git/ --ip='*' --port=8888 --no-browser"
+
 #**Finding Lane Lines on the Road** 
 <img src="laneLines_thirdPass.jpg" width="480" alt="Combined Image" />
 
